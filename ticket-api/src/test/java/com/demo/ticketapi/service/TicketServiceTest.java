@@ -28,7 +28,7 @@ class TicketServiceTest {
         //creo un objeto simulado de FlightClient
         FlightClient mockedFlightClient = mock(FlightClient.class);
 
-        when(mockedFlightClient.getFlightById()).thenReturn(Optional.of(dummyFlightDto));
+        when(mockedFlightClient.getFlightById(123L)).thenReturn(Optional.of(dummyFlightDto));
 
         // Creo una instancia de TicketService y le asigno el mockedFlightClient a la propiedad flighClient
         TicketService ticketService = new TicketService();
