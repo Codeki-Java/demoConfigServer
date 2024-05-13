@@ -21,7 +21,7 @@ public class TicketService {
 
     public Ticket addTicket(Ticket ticket, Long id) {
         // Obtener el vuelo correspondiente por su ID
-        FlightDto flightToTicket = flightClient.getFlightById()
+        FlightDto flightToTicket = flightClient.getFlightById(id)
                 .orElseThrow(() -> new RuntimeException("Flight with id " + id + " not found"));
 
         // Establecer el FlightDto en el ticket

@@ -32,7 +32,7 @@ public class TicketController {
     //Agregado Ale
     @GetMapping("/vuelos/{id}")
     public Optional<FlightDto> findFlightById(@PathVariable Long id) {
-        return flightClient.getFlightById();
+        return flightClient.getFlightById(id);
     }
 /*
     //addTicket original
