@@ -3,6 +3,6 @@ spring:
     name: ticket-service
 
   cloud:
-     config:
-       enabled: true
-       uri: http://localhost:8081
+    config:
+      enabled: true
+      uri: http://localhost:8081
