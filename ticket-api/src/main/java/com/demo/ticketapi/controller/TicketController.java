@@ -46,4 +46,11 @@ public class TicketController {
     public Ticket addTicket(@RequestBody Ticket ticket, @PathVariable Long id){
         return ticketservice.addTicket(ticket, id);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteTicket(@PathVariable Long id) {
+        ticketservice.deleteTicket(id);
+    }
+
+
 }
