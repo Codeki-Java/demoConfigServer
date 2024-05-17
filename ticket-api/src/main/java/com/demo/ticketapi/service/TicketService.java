@@ -56,7 +56,6 @@ public class TicketService {
         if (optionalTicketToUpdate.isPresent()) {
             Ticket ticketToUpdate = optionalTicketToUpdate.get();
 
-
             //Actualizar campos del ticket con la nueva informacion
             ticketToUpdate.setId(ticket.getId());
             ticketToUpdate.setFlightDto(ticket.getFlightDto());
@@ -68,9 +67,5 @@ public class TicketService {
         } else {
             throw new RuntimeException("Ticket con ID " + id + "no encontrado");
         }
-
     }
-
-
-
 }
