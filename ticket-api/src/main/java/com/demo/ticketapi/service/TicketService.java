@@ -4,12 +4,10 @@ import com.demo.ticketapi.model.FlightDto;
 import com.demo.ticketapi.model.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class TicketService {
@@ -47,5 +45,32 @@ public class TicketService {
         // Si se encuentra el ticket, elimínalo de la lista
         ticketToDelete.ifPresent(tickets::remove);
     }
+
+    public Ticket updateTicket(Ticket ticket, Long id) {
+        // Obtener el ticket correspondiente por su ID
+        Optional<Ticket> optionalTicketToUpdate = tickets.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst();
+
+        //Si encuentra el ticket, guardarlo con la nueva informacion
+        if (optionalTicketToUpdate.isPresent()) {
+            Ticket ticketToUpdate = optionalTicketToUpdate.get();
+
+
+            //Actualizar campos del ticket con la nueva informacion
+            ticketToUpdate.setId(ticket.getId());
+            ticketToUpdate.setFlightDto(ticket.getFlightDto());
+            ticketToUpdate.setPassengerName(ticket.getPassengerName());
+            ticketToUpdate.setPassengerEmail(ticket.getPassengerEmail());
+            ticketToUpdate.setPassengerPassport(ticket.getPassengerPassport());
+
+            return ticketToUpdate;
+        } else {
+            throw new RuntimeException("Ticket con ID " + id + "no encontrado");
+        }
+
+    }
+
+
 
 }
