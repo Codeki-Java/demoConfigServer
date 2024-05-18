@@ -45,9 +45,10 @@ La arquitectura del proyecto incluye los siguientes componentes:
 
 La API de Vuelos permite:
 
-- Consultar vuelos disponibles.
-- Reservar vuelos.
-- Cancelar reservas.
+- Crear vuelos
+- Consultar vuelos exitentes: trayendo todos los vuelos y vuelos por ID.
+- Editar vuelos.
+- Eliminar vuelos.
 
 Se comunica con:
 
@@ -58,15 +59,16 @@ Se comunica con:
 
 La API de Tickets permite:
 
-- Comprar tickets.
-- Consultar el estado de tickets comprados.
-- Cancelar tickets.
+- Crear tickets combinando vuelo traido desde la API de Vuelos y la información del pasajero.
+- Consultar listado de tickets creados: trayendo todos los tickets y tickets por ID.
+- Editar tickets.
+- Borrar tickets.
 
 ### API de Cotización del Dólar
 
 La API de Cotización del Dólar permite:
 
-- Obtener la cotización actual del dólar desde una API externa.
+- Obtener la cotización actual del dólar desde una API externa. Está comunicada con API de Vuelos a través de RestTemplate.
 
 ## Configuración Centralizada
 
@@ -91,8 +93,5 @@ Ejecuta los microservicios en el siguiente orden:
 - Eureka Server
 - API de Vuelos
 - API de Tickets
-
-
-
 
 Asegúrate de que el Config Server y el Eureka Server estén en ejecución antes de iniciar los demás servicios.
