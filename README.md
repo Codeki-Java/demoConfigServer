@@ -1,3 +1,5 @@
+![Descripción de la imagen](https://codeki.moodlecloud.com/pluginfile.php/1/core_admin/logo/0x200/1711445276/logo-secundario.png)
+
 # Proyecto de API de Vuelos
 
 Este proyecto es un monorepositorio desarrollado en Java con Spring Boot, que consiste en una API de vuelos que se comunica con una API de tickets a través de FeignClient, y con una API externa de cotización del dólar mediante RestTemplate. Además, se utilizan microservicios gestionados con Eureka y una configuración centralizada mediante Config Server.
