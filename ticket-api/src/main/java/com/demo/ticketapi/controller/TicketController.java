@@ -56,6 +56,4 @@ public class TicketController {
     public Ticket updateTicket(@RequestBody Ticket ticket, @PathVariable Long id) {
         return ticketservice.updateTicket(ticket, id);
     }
-
-
 }
