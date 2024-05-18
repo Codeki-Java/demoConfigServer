@@ -1,5 +1,12 @@
 ![Descripción de la imagen](https://codeki.moodlecloud.com/pluginfile.php/1/core_admin/logo/0x200/1711445276/logo-secundario.png)
 
+![Descripción de la imagen](https://media.licdn.com/dms/image/C4D0BAQE085qupw4Z-w/company-logo_200_200/0/1630496983258?e=2147483647&v=beta&t=CD8bbuAexWnfPy3DdYbxXmRxwD2mVmbNw7zWU1sMEts)
+![Descripción de la imagen](https://cessi.org.ar/wp-content/uploads/2022/03/it-patagonia.png)
+
+## Bootcamp de Java 
+Organizado por: 
+Agencia de Aprendizaje a lo largo de la vida, academia educativa Codeki y IT Patagonia
+
 # Proyecto de API de Vuelos
 
 Este proyecto es un monorepositorio desarrollado en Java con Spring Boot, que consiste en una API de vuelos que se comunica con una API de tickets a través de FeignClient, y con una API externa de cotización del dólar mediante RestTemplate. Además, se utilizan microservicios gestionados con Eureka y una configuración centralizada mediante Config Server.
